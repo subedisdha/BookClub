@@ -1,0 +1,49 @@
+@media (min-width : 1440px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1170px;
+    }
+}
+/* for mobile */
+@media only screen and (min-width: 200px) and (max-width:575px){
+    .btn-outer{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background: white;
+        padding: 5px 0px;
+        justify-content: center !important;
+    }
+    .message-btn, .far-btn {
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+    .bannerContent h1{
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 35px;
+    }
+    .bannerContent p, .bannerContent ul li{
+        font-size: 16px;
+    }
+    /* fixing col size 2 buttons  */
+    .bannerContentBtn{
+        flex-direction: column;
+
+    }
+    .bannerContentBtn button{
+        width: 100%;
+    }
+    .bannerContent br{
+        display: none;
+    }
+    .bannerForm{
+        padding: 20px;
+    
+    }
+    .highlights-section{
+        font-size:28px ;
+    }
+    
+}

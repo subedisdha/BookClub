@@ -1,0 +1,101 @@
+*{
+    font-family: "Nunito", sans-serif;
+}
+.messagebtn{
+    border: 1px solid #b5d351;
+   
+    color: #797b10;
+    font-size: 16px;
+}
+
+.messagebtn:hover{
+    border: 1px solid #b5d351;
+    color: rgb(228, 69, 69);
+}
+.farbtn{
+    background: linear-gradient(rgb(202, 138, 43), rgb(139, 184, 28));
+}
+.bannerContent h1{
+    font-size: 52px;
+    font-weight: 400;
+}
+.bannerContent p{
+    font-size: 22px;
+}
+.bannerContent h1 span{
+    color:#797b10;
+    
+}
+.bannerContent ul{
+    list-style: none;
+}
+.bannerContent ul li{
+    font-size: 20px;
+}
+.bannerContentBtn button{
+    width: 50%;
+    padding: 10px 0px;
+    border-radius: 5px;
+
+}
+.bannerContent button:first-child{
+    color: antiquewhite;
+   background: linear-gradient(rgb(186, 142, 60)
+   ,rgb(201, 160, 85)); 
+}
+.bannerForm{
+    padding: 40px;
+    border-radius: 10px;
+
+}
+.bannerForm h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.bannerForm button{
+    width: 100%;
+    padding: 10px 0px;
+    background: linear-gradient(rgb(186, 142, 60)
+   ,rgb(201, 160, 85)); 
+   border: none;
+   color: antiquewhite;
+}
+.fiveList h2{
+    font-size: 30px;
+    font-weight: 600;
+    color:#797b10;
+}
+.highlights-section{
+    background-color:rgb(233, 224, 232);
+}
+.highlights-section h2{
+    color:#797b10;
+    font-size: 36px;
+    font-weight: 600;
+}
+.highlights-section p{
+    font-size: 18px;
+}
+.logo1{
+    width: 60px;
+    height: auto;
+}
+.highlightsItems h4{
+    font-size: 20px;
+}
+.highlightsItems p{
+    font-size: 15px;
+}
+.bgFaq{
+    background-color: rgb(196, 245, 173);
+}
+.tabColor{
+    background-color: rgb(220, 210, 190);
+}
+.myTabSystem .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: rgb(213, 174, 122);
+   border-bottom: 2px solid rgb(19, 99, 104);
+}
+.footerBg{
+    background-color: #7b7c50;
+}

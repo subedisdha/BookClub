@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sdha BookClub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <!-- google font cdn -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- See Top Picks Modal -->
+<div class="modal fade" id="stpModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Here are some of the most loved books by our community this month!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>The Midnight Library – Matt Haig
+                Genre: Fiction | Rating: ★★★★☆
+            </li>
+            <li>
+                Atomic Habits – James Clear
+                Genre: Self-help | Rating: ★★★★★
+            </li>
+            <li>
+                Circe – Madeline Miller
+                Genre: Fantasy | Rating: ★★★★☆
+            </li>
+               
+                
+                
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Explore Genres Modal -->
+  <div class="modal fade" id="egModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Choose Your Genre</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-outline-primary">Mystery</button>
+                <button class="btn btn-outline-secondary">Romance</button>
+                <button class="btn btn-outline-success">Fantasy</button>
+                <button class="btn btn-outline-danger">Thriller</button>
+                <button class="btn btn-outline-warning">Non-Fiction</button>
+              </div>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- main header of our sites -->
+    <header class="container-fluid py-2 shadow-lg position-sticky top-0 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <figure class="col-lg-6 col-12 text-lg-start text-center mb-0 pb-0">
+                    <i class="fa-solid fa-2x fa-book-open" style="color: #d9c03f;"></i>
+                    sdha bookclub
+                </figure>
+                <div class="col-lg-6">
+                    <div class="btn-outer d-flex gap-3 justify-content-end">
+                        <button class="btn messagebtn">
+                            <i class="fa-solid fa-message" style="color: #707251e7;">
+                            </i> 
+                            Contact Us
+                        </button>
+                            
+                        <button class="btn farbtn">
+                            Book club webinar
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- section 1 -->
+    <section class="container-fluid py-lg-5 py-sm-4 py-3">
+        <div class="container">
+            <div class="row justify-content-between gy-4 align-items-center">
+                <!-- banner section with 2 button down -->
+                <div class="col-lg-6">
+                    <div class="bannerContent">
+                        <h1> Browse Books <br>by 
+                        <span>Genre</span>
+                        </h1>
+                        <p>Explore a wide variety of genres including mystery, romance, fantasy, non-fiction, and more. Find your next great read by diving into the genres you love most.</p>
+                       <!-- making list now with tick icon-->
+                        <ul class="m-0 p-0">
+                            <li class="mb-3"><i class="fa-solid fa-circle-check" style="color: #666737;"></i> All genres in one place</li>
+                            <li class="mb-3"><i class="fa-solid fa-circle-check" style="color: #666737;"></i> Quick picks by interest</li>
+                            <li class="mb-3"><i class="fa-solid fa-circle-check" style="color: #666737;"></i> Top reads per genre</li>
+                        </ul>
+                        <!-- making 2 down button  -->
+                         <div class="bannerContentBtn d-flex gap-3">
+                            <!-- if we click this button which is calling the id then modal pops up  -->
+                            <button data-bs-toggle="modal" data-bs-target="#egModal">Explore Genres</button>
+                            <button data-bs-toggle="modal" data-bs-target="#stpModal">See Top Picks</button>
+                         </div>
+                         
+                    </div>
+                </div>
+                <!-- right side col next to the bannerposter -->
+                <div class="col-lg-5">
+                    <form action="" class="bannerForm shadow-lg">
+                        <h3>Join Our Book Club</h3>
+                        <p>Sign up to get updates, book recommendations, and be part of our reading community!</p>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">+977</span>
+                                <input type="text" class="form-control" placeholder="CellPhone Number">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button>Register Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container shadow-lg mt-5 fiveList">
+            <div class="row row-cols-lg-5 row-cols-2 p-4">
+                <div class="col">
+                    <h2>Discover</h2>
+                    <p>New Reads</p>
+                </div>
+                <div class="col">
+                    <h2>Connect</h2>
+                    <p>Fellow Readers</p>
+                </div>
+                <div class="col">
+                    <h2>Review</h2>
+                    <p>Share Thoughts</p>
+                </div>
+                <div class="col">
+                    <h2>Track</h2>
+                    <p>Reading Progress</p>
+                </div>
+                <div class="col">
+                    <h2>Explore</h2>
+                    <p>Genre Variety</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+      <!-- carousel slider -->
+  <div class="carousel slide" data-bs-ride="carousel" id="slider1">
+    <!-- indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#slider1" 
+        data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+        </button>
+        <button type="button" data-bs-target="#slider1" 
+        data-bs-slide-to="1" aria-label="Slide 2">
+        </button>
+        <button type="button" data-bs-target="#slider1" 
+        data-bs-slide-to="2" aria-label="Slide 3">
+        </button>
+    </div>
+    <!-- slides -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/bookcool2.webp" alt="" class="d-block w-100" style="height: 400px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/bookcool4.jpg" alt="" class="d-block w-100" style="height: 400px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="images/atomic habit.jpg" alt="" class="d-block w-100" style="height: 400px; object-fit: cover;">
+        </div>
+    </div>
+    <!-- button to slide image -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#slider1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#slider1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  
+  </div>
+    <!-- section another one: -->
+    <section class="container-fluid highlights-section py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2>Discover Top Book Club Features</h2>
+                    <p>Join our Book Club to experience the best features tailored to help you find, read, and discuss books with fellow readers.</p>
+                </div>
+            </div>
+
+            <div class="row gy-3">
+                <!-- first col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/book.jpg" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Book Recommendations</h4>
+                            <p>Get book suggestions</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- second col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/discussion.png" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Discussion Groups</h4>
+                            <p>Engage in lively discussions</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- third col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/genre1.jpg" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Genre Exploration</h4>
+                            <p>Explore a variety of genres</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fourth col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/events.png" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Exclusive Events</h4>
+                            <p>Participate in special author Q&As</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- fifth col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/reading.jpg" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Reading Challenges</h4>
+                            <p>Join fun reading challenges</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- sixth col logo -->
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="bg-white p-3 d-flex align-items-start gap-2 highlightsItems">
+                        <img src="images/comm.jpg" alt="logo1"class="img-fluid w-25">
+                        <div>
+                            <h4>Community</h4>
+                            <p>Connect and share your love with others</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- navs and tabs -->
+     <section class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold">Explore More About Our Club</h2>
+                    <p>Get to know the different aspects of our Book Club. Use the tabs below to explore what we offer and how you can get involved.</p>
+                </div>
+            </div>
+            <!-- row to work on tabbing -->
+             <div class="row">
+                <div class="col-12 myTabSystem">
+                    <!-- pills tabs format -->
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#about-us" type="button" role="tab" aria-controls="pills-home" aria-selected="true">About Us</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#monthly-picks" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Monthly Picks</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#author-spotlights" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Author Spotlights</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#member-perks" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Member Perks</button>
+                        </li>
+                    </ul>
+                    <!-- putting tabcontent -->
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- for tab 1st -->
+                        <div class="tab-pane fade show active" id="about-us" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="row shadow-lg p-4 tabColor">
+                                <h5>Our Book Club was created to bring readers together from around the world. Whether you're into classic literature or modern thrillers, we’ve got a space for everyone. Our mission is to promote the joy of reading and create a supportive community of book lovers.</h5>
+                            </div>
+                        </div>
+                        <!-- for tab 2nd -->
+                        <div class="tab-pane fade" id="monthly-picks" role="tabpanel" aria-labelledby="pills-second-tab" tabindex="0">
+                            <div class="row shadow-lg p-4 tabColor">
+                                <h5>This month’s pick: “The Night Circus” by Erin Morgenstern.
+                                    Next up: “Educated” by Tara Westover.
+                                    Join discussions, share your thoughts, and dive deep into every story with us!</h5>
+                            </div>
+                        </div>
+                          <!-- for tab 3rd -->
+                        <div class="tab-pane fade" id="author-spotlights" role="tabpanel" aria-labelledby="pills-third-tab" tabindex="0">
+                            <div class="row shadow-lg p-4 tabColor">
+                                <h5>Each month, we shine a light on a standout author. From rising stars to literary legends, get behind-the-scenes stories, interviews, and must-read recommendations.</h5>
+                            </div>
+                        </div>
+                         <!-- for tab 4th -->
+                         <div class="tab-pane fade" id="member-perks" role="tabpanel" aria-labelledby="pills-fourth-tab" tabindex="0">
+                            <div class="row shadow-lg p-4 tabColor">
+                                <h5>As a member, enjoy early access to book lists, invites to exclusive events, member-only giveaways, and more. It's our way of saying thanks for being part of the club!</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+        </div>
+     </section>
+
+    <!-- accordian -->
+    <section class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center fw-bold">Frequently Asked Questions <br> (FAQs)</h2>
+                    <p>Got questions? We’ve got answers! Check out some common questions about our Book Club below.</p>
+
+                    <!-- accordion inside 8 -->
+                     <div class="accordion" id="accordionExample">
+                        <div class="accordion-item mb-2">
+                            <!-- header is for question -->
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I join the Book Club?
+                                </button>
+                            </h2>
+                            <!-- for showing answer -->
+                            <div id="faq1" class="accordion-collapse collapse show bgFaq" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    You can join by simply filling out our registration form. It’s free and takes less than a minute!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <!-- 2nd question -->
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What kind of books do you read?
+                                </button>
+                            </h2>
+                            <!-- for showing second answer -->
+                            <div id="faq2" class="accordion-collapse collapse bgFaq" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We cover a wide range — from fiction and fantasy to biographies and self-help. There’s something for everyone!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <!--  3rd question -->
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How often are new books selected?
+                                </button>
+                            </h2>
+                            <!-- for showing third answer -->
+                            <div id="faq3" class="accordion-collapse collapse bgFaq" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We pick a new featured book every month, and you can suggest titles too!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <!-- 4th question -->
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I suggest books or host discussions?
+                                </button>
+                            </h2>
+                            <!-- for showing fourth answer -->
+                            <div id="faq4" class="accordion-collapse collapse bgFaq" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Yes! Members can suggest books, host virtual meetups, and even lead reading challenges.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footerBg text-light pt-5 pb-3 mt-5">
+        <div class="container">
+          <div class="row text-center text-lg-start">
+            <!-- Site Description -->
+            <div class="col-lg-4 mb-4">
+              <h5 class="text-uppercase">BookClub</h5>
+              <p class="small">
+                A community of book lovers sharing reads, thoughts, and unforgettable stories. Join us and be part of the journey.
+              </p>
+            </div>
+      
+            <!-- Quick Links -->
+            <div class="col-lg-4 mb-4">
+              <h6 class="text-uppercase">Quick Links</h6>
+              <ul class="list-unstyled small">
+                <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                <li><a href="#picks" class="text-light text-decoration-none">Monthly Picks</a></li>
+                <li><a href="#author" class="text-light text-decoration-none">Author Spotlights</a></li>
+                <li><a href="#join-section" class="text-light text-decoration-none">Join Now</a></li>
+              </ul>
+            </div>
+      
+            <!-- Social Media -->
+            <div class="col-lg-4 mb-4">
+              <h6 class="text-uppercase">Follow Us</h6>
+              <div>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Bottom Text -->
+          <div class="row">
+            <div class="col text-center mt-4">
+              <p class="mb-0 small">&copy; 2025 BookClub. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+
+</body> 
+</html>
